@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Artysy</title>
+  <link rel="stylesheet" href="2-style.css">
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Checkout Page</h1>
+    <div id="product-details"></div>
+    <a href="1-index.html" class="btn"> ← Continue Shopping</a>
+  </div>
+
+  <script>
+    // Read product details from URL
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const price = params.get("price");
+    const img = params.get("img");
+
+    if (name && price && img) {
+      document.getElementById("product-details").innerHTML = `
+        <img src="${img}" alt="${name}" style="max-width:200px; border-radius:8px; margin-bottom:15px;">
+        <h2>${name}</h2>
+        <p>Price: <strong>${price}</strong></p>
+        <button class="btn-buy">Proceed to Payment</button>
+      `;
+    } else {
+      document.getElementById("product-details").innerHTML = `
+        <p>No product selected.</p>
+      `;
+    }
+  </script>
+</body>
+</html>
