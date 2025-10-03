@@ -1,0 +1,1 @@
+Artysy is a modern, user-friendly platform designed for artists, creators, and art enthusiasts to showcase, explore, and connect over art. It provides a seamless experience for browsing art collections, discovering new talents, and engaging with the creative community.
